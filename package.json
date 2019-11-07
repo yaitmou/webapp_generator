@@ -1,0 +1,42 @@
+{
+  "name": "@yaitmou/create-web-project",
+  "version": "1.0.0",
+  "description": "A simple tool to create webpack based web projects",
+  "main": "src/index.js",
+  "bin": {
+    "@yaitmou/create-web-project": "bin/create-web-project",
+    "create-web-project": "bin/create-web-project"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "npm",
+    "project-builder",
+    "cli",
+    "create-web-project"
+  ],
+  "author": "Younss Ait Mou",
+  "license": "MIT",
+  "dependencies": {
+    "arg": "^4.1.1",
+    "boxen": "^4.1.0",
+    "chalk": "^2.4.2",
+    "clear": "^0.1.0",
+    "esm": "^3.2.25",
+    "execa": "^3.2.0",
+    "figures": "^3.1.0",
+    "inquirer": "^7.0.0",
+    "listr": "^0.14.3",
+    "log-symbols": "^3.0.0",
+    "log-update": "^3.3.0",
+    "ncp": "^2.0.0",
+    "node-cmd": "^3.0.0",
+    "ora": "^4.0.2",
+    "pkg-install": "^1.0.0"
+  }
+}
