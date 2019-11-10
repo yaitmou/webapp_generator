@@ -1,6 +1,6 @@
 {
   "name": "@yaitmou/create-web-project",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple tool to create webpack based web projects",
   "main": "src/index.js",
   "bin": {
