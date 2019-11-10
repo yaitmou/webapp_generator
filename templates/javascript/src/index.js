@@ -4,7 +4,7 @@ require("./style/index.scss");
 let container_el = document.createElement("div");
 container_el.classList.add("container");
 container_el.innerHTML =
-  "CONGRATS! You have just built your first simple web applications";
+  "CONGRATULATIONS! You have just built your first simple web application. HAPPY CODING!";
 
 // The app title
 let title_el = document.createElement("h1");

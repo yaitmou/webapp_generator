@@ -17,8 +17,6 @@ function parseArgumentsIntoOptions(rawArgs) {
       "-y": "--yes",
       "--git": Boolean,
       "-g": "--git"
-      // "--template": String,
-      // "-t": "--template"
     },
     {
       argv: rawArgs.slice(2)
@@ -28,25 +26,23 @@ function parseArgumentsIntoOptions(rawArgs) {
     skipPrompt: args["--yes"] || false,
     runInstall: args["--install"] || false,
     git: args["--git"] || false,
-    // template: args["--template"] || null,
     projectName: args._[0] || null
   };
 }
 
 async function promptForMissingOptions(options) {
+  // TODO: Add support for more templates
   const defaultTemplate = "javascript";
   if (options.skipPrompt) {
     return;
   }
 
+  // Init questions
   const questions = [];
 
-  questions.push({
-    type: "input",
-    name: "author",
-    message: "Author name"
-  });
-
+  //
+  // Project name
+  //
   if (!options.projectName) {
     questions.push({
       type: "input",
@@ -55,21 +51,28 @@ async function promptForMissingOptions(options) {
       default: "My-rocky-webapp"
     });
   }
+
+  //
+  // Project description
+  //
   questions.push({
     type: "input",
     name: "projectDescription",
     message: "Project description"
   });
-  // if (!options.template) {
-  //   questions.push({
-  //     type: "list",
-  //     name: "template",
-  //     message: "Which project template would you like to use",
-  //     choices: ["javascript", "typescript"],
-  //     default: defaultTemplate
-  //   });
-  // }
 
+  //
+  // Author name
+  //
+  questions.push({
+    type: "input",
+    name: "author",
+    message: "Author name"
+  });
+
+  //
+  // Init git
+  //
   if (!options.git) {
     questions.push({
       type: "confirm",
@@ -79,6 +82,10 @@ async function promptForMissingOptions(options) {
     });
   }
 
+  //
+  // Add fontawesome to the project
+  // TODO: add support for other fonts libraries
+  //
   questions.push({
     type: "confirm",
     name: "fontAwesome",
@@ -86,13 +93,22 @@ async function promptForMissingOptions(options) {
     default: false
   });
 
+  //
+  // Install project dependencies
+  //
   questions.push({
     type: "confirm",
     name: "installDependencies",
     message: "Install project dependencies",
     default: false
   });
+
+  // Ask questions
   const answers = await inquirer.prompt(questions);
+
+  //
+  // Return an object that contains all user preferences
+  //
   return {
     ...options,
     template: defaultTemplate,
@@ -105,9 +121,13 @@ async function promptForMissingOptions(options) {
   };
 }
 
+/**
+ * Fires first!
+ * @param {String[]} args
+ */
 export async function cli(args) {
   clear();
-  sayHello();
+  intro_message();
   let options = parseArgumentsIntoOptions(args);
   options = await promptForMissingOptions(options);
 
@@ -115,9 +135,9 @@ export async function cli(args) {
 }
 
 /**
- * Util functions
+ * A fancy way of saying Hi! :p
  */
-function sayHello() {
+function intro_message() {
   console.log(
     boxen(
       chalk.green.bold("Universal Web Project Builder") +
