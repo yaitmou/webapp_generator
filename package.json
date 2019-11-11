@@ -13,7 +13,8 @@
   "files": [
     "bin/",
     "src/",
-    "templates/"
+    "templates/",
+    "README.md"
   ],
   "repository": {
     "type": "git",
