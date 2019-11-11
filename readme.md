@@ -11,7 +11,7 @@ As long as you have basic knowledge of html, css (scss), and javascript, you're 
 1. Install the package globally by running:
 
 ```bash
-$ npm i g webapp_generator
+$ npm i -g webapp_generator
 ```
 
 2. Navigate to your project directory or create a new one:
