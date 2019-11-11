@@ -1,23 +1,24 @@
 {
-  "name": "@yaitmou/create-web-project",
-  "version": "1.0.1",
+  "name": "webapp_generator",
+  "version": "0.1.0",
   "description": "A simple tool to create webpack based web projects",
   "main": "src/index.js",
   "bin": {
-    "@yaitmou/create-web-project": "bin/create-web-project",
-    "create-web-project": "bin/create-web-project"
+    "webapp_generator": "bin/create-web-project"
   },
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "files": [
     "bin/",
     "src/",
     "templates/"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yaitmou/simple_webapp_builder.git"
+  },
   "keywords": [
     "webpack",
     "npm",
