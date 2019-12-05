@@ -36,7 +36,9 @@ export function initPackage(options) {
         "webpack-merge": "^4.2.1"
       },
       "dependencies": {
-        "@types/webpack-env": "^1.14.0"
+        "@types/webpack-env": "^1.14.0",
+        lodash": "^4.17.15",
+        "y-elements": "^1.1.0"
       },
       "sideEffects": [
         "*.css"

@@ -1,10 +1,11 @@
 # Web Application Generator
 
-A node package for creating a simple web application template. This is particularly useful if you don't want to don't want to include third parties libraries and frameworks. Thus, keeping your source code lightweight.
+A node package for creating a simple web application template. This is particularly useful if you to don't want to include third parties libraries and frameworks. Thus, keeping your source code lightweight. It installs and sets up webpack for you.
 
 ### Prerequisites
 
-As long as you have basic knowledge of html, css (scss), and javascript, you're good to go ;)
+As long as you have basic knowledge of html, css (scss), and javascript, you're good to go!
+Also, you need to have [Node](https://nodejs.org/) and [npm](https://www.npmjs.com/) (or [yarn](https://yarnpkg.com/)) installed on your machine.
 
 ## Getting Started
 
@@ -44,6 +45,10 @@ $ npm run build
 ```
 
 Webpack, will generate a `dist/` folder containing all your compressed source files and resources. Move this folder to your preferred hosting platform.
+
+## CONTRIBUTION
+
+If you would like to contribute, feel free to send us a pull request.
 
 ## Authors
 
